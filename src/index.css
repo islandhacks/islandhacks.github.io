@@ -1,5 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-fredoka: "Fredoka", sans-serif; 
+}
+
+html {
+    @apply font-fredoka;
+  }
+
 
 body {
   background-color:#F7ECC4;
 }
+
