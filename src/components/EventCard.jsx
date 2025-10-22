@@ -1,9 +1,9 @@
 import React from 'react'
 
-const EventCard = (source) => {
+const EventCard = ({source}) => {
   return (
-    <div className='bg-white shadow-md rounded-lg p-6 m-4'>
-        <img className='w-64 h-36' src={source}></img>
+    <div className='p-2 m-4'>
+        <img className='shadow-md w-72 md:w-96 h-48 md:h-64 object-cover rounded-lg' src={source}></img>
     </div>
   )
 }

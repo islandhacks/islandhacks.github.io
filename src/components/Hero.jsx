@@ -4,21 +4,22 @@ import React from "react"
 const Hero = () => {
 
     return(
-        <div>
+        <section className="">
             <div className="flex items-center justify-center w-full mt-8">
-                <img src="/src/assets/islandhacks_hero_image.png" className="w-50 rounded-md rounded-xl shadow-lg"/>
-                <div className="ml-10 block bg-yellow-50 rounded-xl shadow-lg">
-                    <div className="m-8 text-6xl w-180 text-center">The {' '}
-                        <span className="leading-snug bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">Hackathon{' '}</span>
-                        For All to Learn and {' '}
-                        <span className="bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">Have Fun!</span>
-                    </div>
-                    <div className="text-center">
-                        <p className="text-lg text-gray-500 mb-10 w-140 mx-auto">Learn to code, or practice coded, by creating awesome projects with your friends and winning prizes!</p>
-                    </div>
+
+                <div className=" flex flex-col items-center justify-center p-4">
+                    <span className="text-5xl md:text-9xl text-amber-400 w-180 text-center font-bold tracking-wider">IslandHacks</span>
+                    
+                    <span className="leading-snug bg-gradient-to-r text-3xl md:text-4xl font-medium from-green-500 to-green-600 bg-clip-text text-transparent">Sept 27, 2025</span>
+                   
+                   <span className="text-gray-700 text-xl">8:30AM - 8:30PM</span>
+                   <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZC2AhL2U4b2TkLVWLPDN0LHFCKjsQwCTKNPjMFtKbJOd7JQ/viewform?usp=dialog'>
+                      <button className="w-64 md:w-96 p-3 bg-amber-100 border-amber-400 border-2 rounded-xl text-xl font-medium text-amber-400 my-8 hover:cursor-pointer hover:opacity-50 transition-all">Register Now</button>
+                    </a>
+                    
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
@@ -40,4 +41,7 @@ export default Hero;
               <strong className="leading-8 bg-gradient-to-r from-teal-300 to-sky-600 bg-clip-text text-transparent">Doctors:</strong> Assign exercises, track progress, and stay connected with your patients.<br />
               <strong className="bg-gradient-to-r from-teal-300 to-sky-600 bg-clip-text text-transparent">Patients:</strong> Access personalized routines, log your workouts, and guaruntee good form.
             </p>
+            <div className="text-center">
+                        <p className="text-lg text-gray-500 mb-10 w-140 mx-auto">Learn to code, or practice coded, by creating awesome projects with your friends and winning prizes!</p>
+                    </div>
           </div>*/
