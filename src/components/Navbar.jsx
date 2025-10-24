@@ -1,6 +1,6 @@
 import React from 'react'
 import favicon from '/src/assets/favicon.png';
-
+import Socials from './Socials.jsx';
 
 /*
 <div className='flex items-center gap-8'>
@@ -26,7 +26,7 @@ const navbar = () => {
         <nav className="navbar">
             <div className='w-full flex justify-between p-4 px-8'>
                 <img className='w-16 h-16 rounded-full' src={favicon}></img>
-                
+                <Socials></Socials>
             </div>
         </nav>
     </div>

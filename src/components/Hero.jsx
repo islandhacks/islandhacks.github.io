@@ -1,26 +1,57 @@
 import React from "react"
-
+import Countdown from "./Countdown.jsx";
 
 const Hero = () => {
+  return (
+    <section className="w-full py-12 md:py-20">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex justify-left ">
+          {/* Left: copy */}
+          <div className="text-center md:text-left">
+            
+            <p className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-600 font-semibold mb-4">November 15 • Alameda, CA</p>
 
-    return(
-        <section className="">
-            <div className="flex items-center justify-center w-full mt-8">
+            <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+              IslandHacks
+            </h1>
+            <p className="mt-2 text-2xl md:text-3xl font-semibold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">
+              8:30AM — 8:30PM
+            </p>
+            
 
-                <div className=" flex flex-col items-center justify-center p-4">
-                    <span className="text-5xl md:text-9xl text-amber-400 w-180 text-center font-bold tracking-wider">IslandHacks</span>
-                    
-                    <span className="leading-snug bg-gradient-to-r text-3xl md:text-4xl font-medium from-green-500 to-green-600 bg-clip-text text-transparent">Sept 27, 2025</span>
-                   
-                   <span className="text-gray-700 text-xl">8:30AM - 8:30PM</span>
-                   <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZC2AhL2U4b2TkLVWLPDN0LHFCKjsQwCTKNPjMFtKbJOd7JQ/viewform?usp=dialog'>
-                      <button className="w-64 md:w-96 p-3 bg-amber-100 border-amber-400 border-2 rounded-xl text-xl font-medium text-amber-400 my-8 hover:cursor-pointer hover:opacity-50 transition-all">Register Now</button>
-                    </a>
-                    
-                </div>
+            <p className="mt-6 text-gray-600 max-w-xl mx-auto md:mx-0">
+              A 12-hour high-school hackathon on Bay Farm Island. Build projects, learn new skills, collaborate with mentors, and win prizes. Food and swag provided.
+            </p>
+            <Countdown/>
+
+            
+                        
+
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-3 max-w-sm mx-auto md:mx-0">
+              <a
+                href="https://forms.gle/5xQ11Mq7ckGd8c679"
+                className="inline-flex items-center justify-center px-6 py-3 bg-amber-400 text-white font-medium rounded-lg shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                aria-label="Register for IslandHacks"
+              >
+                Register
+              </a>
+
+              <a
+                href="#about"
+                className="inline-flex items-center justify-center px-6 py-3 border border-amber-300 text-amber-600 bg-white rounded-lg hover:bg-amber-50 focus:outline-none"
+                aria-label="Learn more about IslandHacks"
+              >
+                Learn more
+              </a>
             </div>
-        </section>
-    )
+          </div>
+
+          {/* Right: decorative illustration */}
+         
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Hero;

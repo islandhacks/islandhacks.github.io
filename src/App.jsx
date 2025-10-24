@@ -10,7 +10,7 @@ import Sponsors from './components/Sponsors.jsx'
 import Schedule from './components/Schedule.jsx'
 import Info from './components/Info.jsx'
 import PreLaunch from './components/PreLaunch.jsx'
-
+import Countdown from './components/Countdown.jsx'
 /*
 
 
@@ -22,6 +22,7 @@ function App() {
   return (
     <>
    <Navbar />
+
 <Hero />
     <About />
     <Info />
