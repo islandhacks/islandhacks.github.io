@@ -13,7 +13,7 @@ const Hero = () => {
                     <span className="leading-snug bg-gradient-to-r text-3xl md:text-4xl font-medium from-green-500 to-green-600 bg-clip-text text-transparent">Sept 27, 2025</span>
                    
                    <span className="text-gray-700 text-xl">8:30AM - 8:30PM</span>
-                   <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZC2AhL2U4b2TkLVWLPDN0LHFCKjsQwCTKNPjMFtKbJOd7JQ/viewform?usp=dialog'>
+                   <a href='https://forms.gle/5xQ11Mq7ckGd8c679'>
                       <button className="w-64 md:w-96 p-3 bg-amber-100 border-amber-400 border-2 rounded-xl text-xl font-medium text-amber-400 my-8 hover:cursor-pointer hover:opacity-50 transition-all">Register Now</button>
                     </a>
                     
