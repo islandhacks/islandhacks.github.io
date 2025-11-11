@@ -3,13 +3,16 @@ import React from 'react'
 const Schedule = () => {
     const schedule = [
         { time: '8:30 AM', activity: 'Doors Open' },
-        { time: '9:00 AM', activity: 'Opening Ceremony' },
-        { time: '12:30 PM', activity: 'Lunch Break' },
-        { time: '1:45 PM', activity: 'Workshops Begin' },
-        { time: '3:00 PM', activity: 'Career Panel' },
-        { time: '5:00 PM', activity: 'Dinner Break' },
-        { time: '7:00 PM', activity: 'Presentations Start' },
-        { time: '8:00 PM', activity: 'Awards Ceremony' },
+        { time: '9:00 AM', activity: 'Opening Ceremony/Icebreaker' },
+        { time: '9:30 AM', activity: 'Theme reveal and Project time begins' },
+        { time: '9:40 AM', activity: 'Web (HTML/JS) workshops  open' },
+        { time: '11:40 AM', activity: 'Workshops close' },
+        { time: '12:00 PM', activity: 'Lunch' },
+        { time: '1:30 PM', activity: 'Career panel begins' },
+        { time: '5:45 PM', activity: 'Dinner and Projects are submitted' },
+        { time: '6:30 PM', activity: 'Presentations begin' },
+        { time: '8:00 PM', activity: 'Closing ceremony, awards,  raffle' },
+        { time: '8:30 PM', activity: 'Group picture, event ends ' },
     ];
 
         return (
