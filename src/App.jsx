@@ -15,22 +15,24 @@ import Countdown from './components/Countdown.jsx'
 
 
 */
-
+import HeroOver from './components/HeroOver.jsx'
 
 function App() {
 
   return (
     <>
-   <Navbar />
-
-<Hero />
-    <About />
-    <Info />
-    
-    <Schedule />
-    <PastEvents />
+    <Navbar />
+    <Hero/>
+    <About/>
+    <Info></Info>
+    <Schedule></Schedule>
     <Faq/>
-    <Sponsors />
+
+   
+    
+
+    
+    
     
 
     </>

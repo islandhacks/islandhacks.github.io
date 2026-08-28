@@ -16,7 +16,7 @@ const Faq = () => {
     {
       id: 2,
       question: "Where is IslandHacks going to be held?",
-      answer: "This year, IslandHacks is going to be hosted at offices owned by Penumbra, a biotech company located on Bay Farm Island. The address is 1351 Harbor Bay Pkwy, Alameda, CA 94502."
+      answer: "This year, IslandHacks is going to be hosted at offices owned by Exelixis, a biotech company located on Bay Farm Island. The address is 1851 Harbor Bay Pkwy, Alameda, CA 94502"
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Faq = () => {
     {
       id: 5,
       question: "Who runs this? Is it supervised?",
-      answer: "IslandHacks is completely led by students, but we'll have plenty of supervisors on hand! Last year, our event was supervised by AUSD parents, teachers, and other staff members, and this year we'll also have staff from Penumbra supervising!"
+      answer: "IslandHacks is completely led by students, but we'll have plenty of supervisors on hand! Last year, our event was supervised by AUSD parents, teachers, and other staff members, and this year we'll also have staff from Exelixis supervising!"
     }
   ];
 

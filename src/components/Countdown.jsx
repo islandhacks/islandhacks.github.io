@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 // - target: string | Date - target date/time (defaults to Nov 15, 2025 08:30 local)
 // - className: optional wrapper className
 // Usage: <Countdown target="2025-11-15T08:30:00" />
-const Countdown = ({ target = '2025-11-15T08:30:00', className = '' }) => {
+const Countdown = ({ target = '2026-09-12T09:00:00', className = '' }) => {
   const parseTarget = (t) => (t instanceof Date ? t : new Date(t))
   const targetDate = parseTarget(target)
 

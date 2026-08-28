@@ -14,7 +14,6 @@ const Sponsors = () => {
                 <h2 className='text-3xl font-bold text-amber-400 text-center mb-4'>Our Sponsors</h2>
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 p-8'>
                     <SponsorItem source={exelixis}></SponsorItem>
-                    <SponsorItem source={penumbra}></SponsorItem>
                     <SponsorItem source={ahs}></SponsorItem>
                     <SponsorItem source={ehs}></SponsorItem>
                 </div>

@@ -1,7 +1,7 @@
 import React from "react"
-import Countdown from "./Countdown.jsx";
 
-const Hero = () => {
+
+const HeroOver = () => {
   return (
     <section className="w-full py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
@@ -9,40 +9,32 @@ const Hero = () => {
           {/* Left: copy */}
           <div className="text-center md:text-left">
             
-            <p className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-600 font-semibold mb-4">September 12 • Alameda, CA</p>
+            <p className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-600 font-semibold mb-4">Stay Tuned!</p>
 
             <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
               IslandHacks
             </h1>
             <p className="mt-2 text-2xl md:text-3xl font-semibold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">
-              8:30AM — 9:00PM
+              Thanks for attending!
             </p>
             
 
             <p className="mt-6 text-gray-600 max-w-xl mx-auto md:mx-0">
-              A 12-hour high-school hackathon on Bay Farm Island. Build projects, learn new skills, collaborate with mentors, and win prizes. Food and swag provided.
+              We had a fantastic time hosting IslandHacks 2025! Stay tuned for updates on future events and opportunities to code, collaborate, and win prizes.
             </p>
-            <Countdown/>
 
             
                         
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-3 max-w-sm mx-auto md:mx-0">
               <a
-                href="https://forms.gle/CsgJUFZZ6BSwzho8A"
+                href="https://photos.app.goo.gl/sHEefNXz6MLxtCoa7"
                 className="inline-flex items-center justify-center px-6 py-3 bg-amber-400 text-white font-medium rounded-lg shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                aria-label="Register for IslandHacks"
               >
-                Register
+                Photos
               </a>
 
-              <a
-                href="#about"
-                className="inline-flex items-center justify-center px-6 py-3 border border-amber-300 text-amber-600 bg-white rounded-lg hover:bg-amber-50 focus:outline-none"
-                aria-label="Learn more about IslandHacks"
-              >
-                Learn more
-              </a>
+             
             </div>
           </div>
 
@@ -54,7 +46,7 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default HeroOver;
 
 /*
 <h1 className="mb-6 max-w-4xl lg:max-w-6xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
