@@ -2,18 +2,18 @@ import React from 'react'
 
 const Schedule = () => {
     const schedule = [
-        { time: '8:30 AM', activity: 'Doors Open' },
-        { time: '9:00 AM', activity: 'Opening Ceremony' },
-        { time: '9:30 AM', activity: 'Theme reveal and Project time begins' },
-        { time: '9:40 AM', activity: 'Web (HTML/JS) workshops  open' },
-        { time: '11:40 AM', activity: 'Workshops close' },
-        { time: '12:00 PM', activity: 'Lunch' },
-        { time: '1:30 PM', activity: 'Fire side chat' },
-        { time: '5:45 PM', activity: 'Dinner and Projects are submitted' },
-        { time: '6:30 PM', activity: 'Presentations begin' },
-        { time: '8:00 PM', activity: 'Closing ceremony, awards,  raffle' },
-        { time: '8:30 PM', activity: 'Group picture, event ends ' },
-    ];
+  { time: "8:30 AM", activity: "Doors Open" },
+  { time: "9:00 AM", activity: "Opening Ceremony" },
+  { time: "9:30 AM", activity: "Theme reveal and Project time begins" },
+  { time: "9:40 AM", activity: "Web (HTML/JS) workshops" },
+  { time: "12:00 PM", activity: "Lunch" },
+  { time: "1:30 PM", activity: "Fire side chat" },
+  { time: "5:45 PM", activity: "Dinner" },
+  { time: "6:00 PM", activity: "Project Submission" },
+  { time: "6:30 PM", activity: "Presentations begin" },
+  { time: "8:00 PM", activity: "Closing ceremony" },
+  { time: "8:30 PM", activity: "Group picture, event ends" },
+];
 
         return (
             <section id="schedule" className="py-12 px-6">

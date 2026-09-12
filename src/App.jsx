@@ -18,16 +18,15 @@ import Countdown from "./components/Countdown.jsx";
 import HeroOver from "./components/HeroOver.jsx";
 import Resources from "./components/Resources.jsx";
 import Rubric from "./components/Rubric.jsx";
+import LiveScheduleBanner from "./components/LiveScheduleBanner.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-
+      <LiveScheduleBanner />
       <Rubric />
-      <div className="px-4 pb-8">
-       
-      </div>
+      <div className="px-4 pb-8"></div>
       <Resources />
       <Schedule></Schedule>
     </>

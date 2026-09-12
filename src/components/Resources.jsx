@@ -17,9 +17,7 @@ const Resources = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-left">
           <div className="text-center md:text-left w-full">
-            <p className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-600 font-semibold mb-4">
-              September 12 • Alameda, CA
-            </p>
+           
 
             <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
               Resources
