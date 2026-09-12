@@ -45,7 +45,16 @@ const Rubric = () => {
             a positive impact on the community.
           </p>
         </div>
-
+         <div className="w-full flex justify-center items-center mb-4">
+         <a
+          href="https://tally.so/r/Pd701e"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-base font-semibold text-slate-900 shadow-lg shadow-amber-200 transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-200"
+        >
+          Sign up
+        </a>
+        </div>
         <div className="grid gap-6 md:grid-cols-3">
           {TIERS.map(({ tier, requirements, accent }) => (
             <div
@@ -68,6 +77,7 @@ const Rubric = () => {
             </div>
           ))}
         </div>
+       
       </div>
     </section>
   );
