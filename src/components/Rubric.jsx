@@ -25,7 +25,6 @@ const TIERS = [
     requirements: [
       "Complex multi-level architecture",
       "Must submit code to enter this tier",
-      "Must cover technical details in the presentation",
       "Strong demonstration of sustainability impact",
     ],
   },
