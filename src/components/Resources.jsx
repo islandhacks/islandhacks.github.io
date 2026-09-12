@@ -6,6 +6,7 @@ const resourceLinks = [
   { name: "GitHub", url: "https://github.com" },
   { name: "MDN Web Docs", url: "https://developer.mozilla.org" },
   {name: "General web development resources", url: "https://github.com/iamismile/web-dev-resources"}
+  {name: "Web IDE (for non web development) ex. python", url: "https://vscode.dev/"}
 ];
 
 const Resources = () => {
