@@ -16,17 +16,18 @@ import Countdown from './components/Countdown.jsx'
 
 */
 import HeroOver from './components/HeroOver.jsx'
+import Resources from './components/Resources.jsx'
 
 function App() {
 
   return (
     <>
     <Navbar />
-    <Hero/>
-    <About/>
-    <Info></Info>
+    <Resources/>
+ 
+   
     <Schedule></Schedule>
-    <Faq/>
+    
 
    
     
