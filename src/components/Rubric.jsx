@@ -1,17 +1,15 @@
 import React from "react";
 
 const resourceLinks = [
-{ name: "LiveWeave", url: "https://liveweave.com/index.php" },
-{name: "Webdev Workshop Slideshow", url: "https://canva.link/lma00hjgj8vwkmt"},
-  { name: "JSFiddle", url: "https://jsfiddle.net" },
-  { name: "CodePen", url: "https://codepen.io" },
-  { name: "GitHub", url: "https://github.com" },
-  { name: "MDN Web Docs", url: "https://developer.mozilla.org" },
-  {name: "General web development resources", url: "https://github.com/iamismile/web-dev-resources"},
-  {name: "Web IDE (for non web development) ex. python", url: "https://vscode.dev/"}
+  {
+    tier: "Beginner",
+    requirements: [
+        ""
+    ]
+  }
 ];
 
-const Resources = () => {
+const Rubric = () => {
   return (
     <section className="w-full py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
@@ -65,7 +63,7 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default Rubric;
 
 /*
 <h1 className="mb-6 max-w-4xl lg:max-w-6xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
