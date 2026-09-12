@@ -17,15 +17,16 @@ import Countdown from './components/Countdown.jsx'
 */
 import HeroOver from './components/HeroOver.jsx'
 import Resources from './components/Resources.jsx'
+import Rubric from './components/Rubric.jsx'
 
 function App() {
 
   return (
     <>
     <Navbar />
+    
+    <Rubric />
     <Resources/>
- 
-   
     <Schedule></Schedule>
     
 

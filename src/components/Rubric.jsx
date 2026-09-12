@@ -1,62 +1,72 @@
 import React from "react";
 
-const resourceLinks = [
+const TIERS = [
   {
     tier: "Beginner",
+    accent: "bg-emerald-500",
     requirements: [
-        ""
-    ]
-  }
+      "Ex: scratch / block coding",
+      "Simple idea that connects to sustainability",
+      "Basic explanation of the project goal",
+    ],
+  },
+  {
+    tier: "Intermediate",
+    accent: "bg-sky-500",
+    requirements: [
+      "Ex: simple HTML / CSS website (1–3 pages)",
+      "Project includes a clear user-facing feature",
+      "Some logic or interaction beyond a static mockup",
+    ],
+  },
+  {
+    tier: "Advanced",
+    accent: "bg-amber-500",
+    requirements: [
+      "Complex multi-level architecture",
+      "Must submit code to enter this tier",
+      "Must cover technical details in the presentation",
+      "Strong demonstration of sustainability impact",
+    ],
+  },
 ];
 
 const Rubric = () => {
   return (
     <section className="w-full py-12 md:py-20">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex justify-left">
-          <div className="text-center md:text-left w-full">
-            <p className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-600 font-semibold mb-4">
-              September 12 • Alameda, CA
-            </p>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 text-center">
+          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            Build something that relates to sustainability
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-600">
+            Create an original project that addresses a real-world
+            sustainability challenge, improves environmental awareness, or makes
+            a positive impact on the community.
+          </p>
+        </div>
 
-            <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
-              Resources
-            </h1>
-
-            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-              <table className="min-w-full divide-y divide-slate-200 text-left text-sm text-slate-700">
-                <thead className="bg-slate-50">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold text-slate-900">
-                      Website
-                    </th>
-                    <th className="px-4 py-3 font-semibold text-slate-900">
-                      Link
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200">
-                  {resourceLinks.map(({ name, url }) => (
-                    <tr key={name} className="hover:bg-slate-50">
-                      <td className="px-4 py-3 font-medium text-slate-800">
-                        {name}
-                      </td>
-                      <td className="px-4 py-3">
-                        <a
-                          className="text-green-600 underline decoration-green-400 underline-offset-2 transition hover:text-green-700"
-                          href={url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {url.replace("https://", "")}
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        <div className="grid gap-6 md:grid-cols-3">
+          {TIERS.map(({ tier, requirements, accent }) => (
+            <div
+              key={tier}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60"
+            >
+              <div
+                className={`mb-4 inline-flex rounded-full ${accent} px-3 py-1 text-sm font-semibold text-white`}
+              >
+                {tier}
+              </div>
+              <ul className="space-y-3 text-left text-slate-700">
+                {requirements.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-slate-900" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
