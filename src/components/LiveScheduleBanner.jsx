@@ -29,59 +29,78 @@ function parseTimeToMinutes(timeString) {
   return hours * 60 + minutes;
 }
 
-function getCurrentEventStatus(now = new Date()) {
-  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+function parseDateToMinutes(date) {
+  return date.getHours() * 60 + date.getMinutes();
+}
 
-  const eventIndex = SCHEDULE.findIndex((event, index) => {
-    const currentMinutes = parseTimeToMinutes(event.time);
-    const nextEvent = SCHEDULE[index + 1];
-    const nextMinutes = nextEvent
-      ? parseTimeToMinutes(nextEvent.time)
-      : Infinity;
+function formatCountdown(totalSeconds) {
+  if (totalSeconds <= 0) {
+    return "Now";
+  }
 
-    return nowMinutes >= currentMinutes && nowMinutes < nextMinutes;
-  });
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
 
-  if (eventIndex === -1) {
-    const firstEventMinutes = parseTimeToMinutes(SCHEDULE[0].time);
-    if (nowMinutes < firstEventMinutes) {
-      return {
-        status: "Upcoming",
-        event: SCHEDULE[0],
-      };
-    }
+  const parts = [];
 
+  if (hours > 0) {
+    parts.push(`${hours}h`);
+  }
+
+  if (minutes > 0 || hours > 0) {
+    parts.push(`${minutes}m`);
+  }
+
+  parts.push(`${seconds}s`);
+
+  return `${parts.join(" ")}`;
+}
+
+function getNextActivity(now = new Date()) {
+  const nowMinutes = parseDateToMinutes(now);
+  const nextEvent =
+    SCHEDULE.find((event) => parseTimeToMinutes(event.time) > nowMinutes) ??
+    null;
+
+  if (!nextEvent) {
     return {
       status: "Finished",
       event: SCHEDULE[SCHEDULE.length - 1],
+      countdown: "Event complete",
     };
   }
 
+  const nextEventMinutes = parseTimeToMinutes(nextEvent.time);
+  const totalSecondsUntilNext =
+    nextEventMinutes * 60 +
+    0 -
+    (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds());
+
   return {
-    status: "Live",
-    event: SCHEDULE[eventIndex],
+    status: totalSecondsUntilNext <= 60 ? "Starting soon" : "Next up",
+    event: nextEvent,
+    countdown: formatCountdown(Math.max(0, totalSecondsUntilNext)),
   };
 }
 
 export default function LiveScheduleBanner() {
-  const [currentEvent, setCurrentEvent] = useState(() =>
-    getCurrentEventStatus(),
-  );
+  const [nextActivity, setNextActivity] = useState(() => getNextActivity());
 
   useEffect(() => {
-    const updateCurrentEvent = () => {
-      setCurrentEvent(getCurrentEventStatus(new Date()));
+    const updateNextActivity = () => {
+      setNextActivity(getNextActivity(new Date()));
     };
 
-    updateCurrentEvent();
-    const intervalId = setInterval(updateCurrentEvent, 60000);
+    updateNextActivity();
+    const intervalId = setInterval(updateNextActivity, 1000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   const labelStyles = {
-    Live: "bg-emerald-100 text-emerald-700",
-    Upcoming: "bg-amber-100 text-amber-700",
+    "Next up": "bg-amber-100 text-amber-700",
+    "Starting soon": "bg-emerald-100 text-emerald-700",
     Finished: "bg-slate-200 text-slate-700",
   };
 
@@ -91,22 +110,22 @@ export default function LiveScheduleBanner() {
         <div className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
             <span
-              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${labelStyles[currentEvent.status]}`}
+              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ${labelStyles[nextActivity.status]}`}
             >
-              {currentEvent.status}
+              {nextActivity.status}
             </span>
             <div>
               <p className="text-sm font-medium text-slate-500">
-                Current activity
+                Next activity
               </p>
               <p className="text-lg font-bold text-slate-900">
-                {currentEvent.event.activity}
+                {nextActivity.event.activity}
               </p>
             </div>
           </div>
 
           <div className="rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-600">
-            {currentEvent.event.time}
+            {nextActivity.countdown}
           </div>
         </div>
       </div>
